@@ -1,0 +1,171 @@
+/*
+#051e3e
+#251e3e
+#451e3e
+#651e3e
+#851e3e
+*/
+
+html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #71d137;
+    font-size: 1.5em;
+    color: white;
+    height: 100%;
+}
+
+.main-wrap {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 12em;
+}
+
+.wrap {
+    height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.menu label span {
+    user-select: none;
+}
+
+.explanation {
+    padding: 0.5em;
+    border-left: 3px solid #2e6110;
+}
+
+.explanation-element-example {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid;
+}
+
+.normal-element {
+    border: 1px solid white;
+    background-color: black;
+}
+
+.comparing-element {
+    border: 1px solid black;
+    background-color: white;
+}
+
+.sorted-element {
+    border: 1px solid white;
+    background-color: red;
+}
+
+.min-element {
+    border: 1px solid white;
+    background-color: yellow;
+}
+
+.explanation-unit-text {
+    word-break: break-word;
+}
+
+.explanation-unit {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.main-explanation {
+    width: 100%;
+}
+
+input,
+select,
+button {
+    outline: none;
+    background-color: #3e7120;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.2s;
+    margin: 0.1em;
+    user-select: none;
+}
+
+input:hover,
+select:hover,
+button:hover,
+input:focus,
+select:focus,
+button:focus {
+    background-color: #2e6110;
+}
+
+input {
+    font-size: inherit;
+    width: 2.25em;
+}
+
+select {
+    font-size: inherit;
+}
+
+button {
+    font-size: inherit;
+    min-width: 4.5em;
+}
+
+.working-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #2e6110;
+}
+
+.elements {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.element {
+    background-color: black;
+    border-radius: 100px;
+    border: 1px solid white;
+    min-width: 1px;
+    position: relative;
+    left: 0;
+}
+
+.message-area {
+    margin: auto;
+    width: 90%;
+    padding: 0.3em;
+}
+
+.message {
+    word-break: break-word;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
