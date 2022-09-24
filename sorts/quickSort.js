@@ -101,6 +101,6 @@ function quickSortStarter(config) {
     return quickSortUnits
 }
 
-$(function () {
+/*$(function () {
     addSort("Быстрая сортировка", quickSortStarter)
-})
+})*/
