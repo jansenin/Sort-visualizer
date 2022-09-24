@@ -62,12 +62,12 @@ function setElementStateToSortedBS(index) {
 function bubbleSortStarter(config) {
     bubbleSort(0, 0, config)
     const selectionSortUnits = [];
-    selectionSortUnits.push(getExplanationUnit("Элемент", "black", "white"))
-    selectionSortUnits.push(getExplanationUnit("Сравниваемый элемент", "white", "black"))
-    selectionSortUnits.push(getExplanationUnit("Отсортированный элемент", "red", "white"))
+    selectionSortUnits.push(getExplanationUnit("Elements", "black", "white"))
+    selectionSortUnits.push(getExplanationUnit("Comparing elements", "white", "black"))
+    selectionSortUnits.push(getExplanationUnit("Sorted elements", "red", "white"))
     return selectionSortUnits
 }
 
 $(function () {
-    addSort("Сортировка пузырьком", bubbleSortStarter)
+    addSort("Bubble sort", bubbleSortStarter)
 })

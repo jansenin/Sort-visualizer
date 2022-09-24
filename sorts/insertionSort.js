@@ -73,12 +73,12 @@ function setElementStateToSortedIS(index) {
 function insertionSortStarter(config) {
     insertionSort(0, 0, config)
     const insertionSortUnits = [];
-    insertionSortUnits.push(getExplanationUnit("Элемент", "black", "white"))
-    insertionSortUnits.push(getExplanationUnit("Сравниваемый элемент", "white", "black"))
-    insertionSortUnits.push(getExplanationUnit("Отсортированный элемент", "red", "white"))
+    insertionSortUnits.push(getExplanationUnit("Elements", "black", "white"))
+    insertionSortUnits.push(getExplanationUnit("Comparing elements", "white", "black"))
+    insertionSortUnits.push(getExplanationUnit("Sorted elements", "red", "white"))
     return insertionSortUnits
 }
 
 $(function () {
-    addSort("Сортировка вставками", insertionSortStarter)
+    addSort("Insertion sort", insertionSortStarter)
 })

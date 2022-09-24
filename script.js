@@ -117,16 +117,16 @@ function handleNewState(newState) {
     state = newState
     switch (state) {
         case GENERATED_STATE:
-            inputs.startButton.text("Начать")
+            inputs.startButton.text("Start")
             break
         case STOP_STATE:
-            inputs.startButton.text("Продолжить")
+            inputs.startButton.text("Continue")
             break
         case SORTING_STATE:
-            inputs.startButton.text("Пауза")
+            inputs.startButton.text("Pause")
             break
         case NOT_GENERATED_STATE:
-            inputs.startButton.text("Начать")
+            inputs.startButton.text("Start")
             break
     }
 }
@@ -154,28 +154,28 @@ function isConfigCorrect(currentRoundConfig) {
                                 if (currentRoundConfig.maxElement > 1) {
                                     result.result = true
                                 } else {
-                                    result.comment = "Верхняя граница элементов должна быть больше 1"
+                                    result.comment = "Elements max value must be greater than 1"
                                 }
                             } else {
-                                result.comment = "Количество элементов должно быть больше 1"
+                                result.comment = "Elements count must be greater than 1"
                             }
                         } else {
-                            result.comment = "Верхняя граница элементов должна быть меньше 10000"
+                            result.comment = "Elements max value must be less than 10000"
                         }
                     } else {
-                        result.comment = "количество элементов должно быть меньше 100"
+                        result.comment = "Elements count must be less than 100"
                     }
                 } else {
-                    result.comment = "верхняя граница элементов должна быть натуральным числом"
+                    result.comment = "Elements max value must be a natural number"
                 }
             } else {
-                result.comment = "Количество элементов должно быть натуральным числом"
+                result.comment = "Elements count must be a natural number"
             }
         } else {
-            result.comment = "Верхняя граница элементов не определена"
+            result.comment = "Elements max value is not defined"
         }
     } else {
-        result.comment = "Количество элементов не определено"
+        result.comment = "Elements count is not defined"
     }
     return result
 }
@@ -184,13 +184,13 @@ function randomGenerator(count, i) { return Math.random() }
 
 function sineGenerator(count, i) { return Math.sin(i * 1.0 / count * 2 * Math.PI) / 2.0 + 0.5 }
 
-function lineGenerator(count, i) { return (count - i) * 1.0 / count }
+function lineGenerator(count, i) { return (count - i - 1) * 1.0 / count }
 
 function getGeneratorFromName(name) {
     switch (name) {
-        case "Случайная": return randomGenerator
-        case "Синус": return sineGenerator
-        case "Линия": return lineGenerator
+        case "Random": return randomGenerator
+        case "Sinusoidal": return sineGenerator
+        case "Line": return lineGenerator
     }
 }
 
@@ -215,7 +215,7 @@ $(function () {
                 $(".element").css("transition", `all ${sortDelay * 0.8}ms ease`)
                 handleNewState(GENERATED_STATE)
             } else {
-                message("Имя генератора неправильное")
+                message("Generator name is not correct")
             }
         } else {
             message(configCheckResult.comment)
@@ -247,10 +247,10 @@ $(function () {
                     explanation.append(element)
                 });
             } else {
-                message("Имя сортировки неправильное")
+                message("Sort name is not correct")
             }
         } else {
-            message("Сгенерируйте ваш массив")
+            message("Generate your array")
         }
     })
 })

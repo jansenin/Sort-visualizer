@@ -86,13 +86,13 @@ function setElementStateToMinElementSS(index) {
 function selectionSortStarter(config) {
     selectionSort(0, 0, 0, config)
     const selectionSortUnits = [];
-    selectionSortUnits.push(getExplanationUnit("Элемент", "black", "white"))
-    selectionSortUnits.push(getExplanationUnit("Сравниваемый элемент", "white", "black"))
-    selectionSortUnits.push(getExplanationUnit("Отсортированный элемент", "red", "white"))
-    selectionSortUnits.push(getExplanationUnit("Минимальный элемент в неотсортированном массиве", "yellow", "white"))
+    selectionSortUnits.push(getExplanationUnit("Elements", "black", "white"))
+    selectionSortUnits.push(getExplanationUnit("Comparing elements", "white", "black"))
+    selectionSortUnits.push(getExplanationUnit("Sorted elements", "red", "white"))
+    selectionSortUnits.push(getExplanationUnit("Minimal element in unsorted array", "yellow", "white"))
     return selectionSortUnits
 }
 
 $(function () {
-    addSort("Сортировка выбором", selectionSortStarter)
+    addSort("Selection sort", selectionSortStarter)
 })
